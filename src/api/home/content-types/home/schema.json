@@ -99,7 +99,12 @@
     "metaData": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.page-metadata"
+      "component": "shared.page-metadata",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

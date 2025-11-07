@@ -1020,7 +1020,12 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'>;
-    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     problemSection: Schema.Attribute.Component<'shared.hero', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
