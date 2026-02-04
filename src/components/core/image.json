@@ -14,6 +14,11 @@
     },
     "svg": {
       "type": "string"
+    },
+    "subtitle": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.subtitle"
     }
   }
 }

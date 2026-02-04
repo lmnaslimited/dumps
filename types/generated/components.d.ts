@@ -140,6 +140,7 @@ export interface CoreImage extends Struct.ComponentSchema {
   attributes: {
     alternate: Schema.Attribute.String;
     source: Schema.Attribute.String;
+    subtitle: Schema.Attribute.Component<'core.subtitle', true>;
     svg: Schema.Attribute.String;
   };
 }
@@ -185,6 +186,22 @@ export interface CoreSeoIcons extends Struct.ComponentSchema {
     type: Schema.Attribute.String;
     url: Schema.Attribute.String;
     width: Schema.Attribute.BigInteger;
+  };
+}
+
+export interface CoreSubtitle extends Struct.ComponentSchema {
+  collectionName: 'components_core_subtitles';
+  info: {
+    description: '';
+    displayName: 'Subtitle';
+  };
+  attributes: {
+    endTime: Schema.Attribute.String;
+    startTime: Schema.Attribute.String;
+    subtitleURL: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    text: Schema.Attribute.String;
   };
 }
 
@@ -383,6 +400,7 @@ declare module '@strapi/strapi' {
       'core.options': CoreOptions;
       'core.plan': CorePlan;
       'core.seo-icons': CoreSeoIcons;
+      'core.subtitle': CoreSubtitle;
       'core.testimonial': CoreTestimonial;
       'shared.callout': SharedCallout;
       'shared.card': SharedCard;
