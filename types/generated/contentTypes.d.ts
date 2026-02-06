@@ -1706,6 +1706,51 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiSubtitleSubtitle extends Struct.CollectionTypeSchema {
+  collectionName: 'subtitles';
+  info: {
+    description: '';
+    displayName: 'Subtitle';
+    pluralName: 'subtitles';
+    singularName: 'subtitle';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::subtitle.subtitle'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    sourceId: Schema.Attribute.String &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subtitle: Schema.Attribute.Component<'core.subtitle', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTermsAndConditionTermsAndCondition
   extends Struct.SingleTypeSchema {
   collectionName: 'terms_and_conditions';
@@ -2365,6 +2410,7 @@ declare module '@strapi/strapi' {
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::product.product': ApiProductProduct;
       'api::solution.solution': ApiSolutionSolution;
+      'api::subtitle.subtitle': ApiSubtitleSubtitle;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
       'api::trend.trend': ApiTrendTrend;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -1,21 +1,18 @@
 {
-  "collectionName": "components_core_images",
+  "collectionName": "components_core_subtitles",
   "info": {
-    "displayName": "Image",
+    "displayName": "Subtitle",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "source": {
+    "startTime": {
       "type": "string"
     },
-    "alternate": {
+    "endTime": {
       "type": "string"
     },
-    "svg": {
-      "type": "string"
-    },
-    "sourceId": {
+    "text": {
       "type": "string"
     }
   }
