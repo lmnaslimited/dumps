@@ -9,7 +9,7 @@ export interface CoreButton extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     formMode: Schema.Attribute.Enumeration<
-      ['booking', 'contact', 'download', 'undefined']
+      ['booking', 'contact', 'download', 'undefined', 'benefit']
     >;
     href: Schema.Attribute.String;
     icon: Schema.Attribute.String;
