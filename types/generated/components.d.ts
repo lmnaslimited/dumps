@@ -140,7 +140,7 @@ export interface CoreImage extends Struct.ComponentSchema {
   attributes: {
     alternate: Schema.Attribute.String;
     source: Schema.Attribute.String;
-    subtitle: Schema.Attribute.Component<'core.subtitle', true>;
+    sourceId: Schema.Attribute.String;
     svg: Schema.Attribute.String;
   };
 }
@@ -198,9 +198,6 @@ export interface CoreSubtitle extends Struct.ComponentSchema {
   attributes: {
     endTime: Schema.Attribute.String;
     startTime: Schema.Attribute.String;
-    subtitleURL: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
     text: Schema.Attribute.String;
   };
 }
