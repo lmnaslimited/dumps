@@ -7,6 +7,9 @@ export interface CoreButton extends Struct.ComponentSchema {
     displayName: 'Button';
   };
   attributes: {
+    benefitMode: Schema.Attribute.Enumeration<
+      ['roi_calculator', 'pipeline_audit', 'cpq_maturity']
+    >;
     description: Schema.Attribute.Text;
     formMode: Schema.Attribute.Enumeration<
       ['booking', 'contact', 'download', 'undefined']

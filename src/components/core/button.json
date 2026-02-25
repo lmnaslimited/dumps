@@ -37,6 +37,14 @@
         "destructive",
         "ink"
       ]
+    },
+    "benefitMode": {
+      "type": "enumeration",
+      "enum": [
+        "roi_calculator",
+        "pipeline_audit",
+        "cpq_maturity"
+      ]
     }
   }
 }
