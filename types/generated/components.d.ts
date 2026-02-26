@@ -175,6 +175,21 @@ export interface CorePlan extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreQuestion extends Struct.ComponentSchema {
+  collectionName: 'components_core_questions';
+  info: {
+    description: '';
+    displayName: 'Question';
+  };
+  attributes: {
+    inputType: Schema.Attribute.Enumeration<['text', 'number', 'options']>;
+    key: Schema.Attribute.String;
+    options: Schema.Attribute.Component<'core.options', true>;
+    question: Schema.Attribute.String;
+    questionId: Schema.Attribute.String;
+  };
+}
+
 export interface CoreSeoIcons extends Struct.ComponentSchema {
   collectionName: 'components_core_seo_icons';
   info: {
@@ -385,6 +400,7 @@ declare module '@strapi/strapi' {
       'core.image': CoreImage;
       'core.options': CoreOptions;
       'core.plan': CorePlan;
+      'core.question': CoreQuestion;
       'core.seo-icons': CoreSeoIcons;
       'core.testimonial': CoreTestimonial;
       'shared.callout': SharedCallout;

@@ -464,6 +464,49 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiBenefitQuestionBenefitQuestion
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'benefit_questions';
+  info: {
+    description: '';
+    displayName: 'Benefit Question';
+    pluralName: 'benefit-questions';
+    singularName: 'benefit-question';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    benefitType: Schema.Attribute.Enumeration<
+      [
+        'ROI_CALCULATOR',
+        'PIPELINE_AUDIT',
+        'CPQ_MATURITY_SCAN',
+        'SALES_CYCLE_ANALYZER',
+        'TENDER_COMPLEXITY_SCORE',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::benefit-question.benefit-question'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    questions: Schema.Attribute.Component<'core.question', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCareerCareer extends Struct.SingleTypeSchema {
   collectionName: 'careers';
   info: {
@@ -2351,6 +2394,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::benefit-question.benefit-question': ApiBenefitQuestionBenefitQuestion;
       'api::career.career': ApiCareerCareer;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::contact.contact': ApiContactContact;
