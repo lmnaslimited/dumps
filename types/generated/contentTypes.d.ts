@@ -484,11 +484,11 @@ export interface ApiBenefitQuestionBenefitQuestion
   attributes: {
     benefitType: Schema.Attribute.Enumeration<
       [
-        'ROI_CALCULATOR',
-        'PIPELINE_AUDIT',
-        'CPQ_MATURITY_SCAN',
-        'SALES_CYCLE_ANALYZER',
-        'TENDER_COMPLEXITY_SCORE',
+        'roi_calculator',
+        'pipeline_audit',
+        'cpq_maturity_scan',
+        'sales_cycle_analyzer',
+        'tender_complexity_score',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
