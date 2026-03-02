@@ -14,6 +14,9 @@
     },
     "svg": {
       "type": "string"
+    },
+    "sourceId": {
+      "type": "string"
     }
   }
 }
