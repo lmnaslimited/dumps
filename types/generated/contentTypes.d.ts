@@ -1040,7 +1040,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    testimonials: Schema.Attribute.Component<'shared.card', true> &
+    testimonials: Schema.Attribute.Component<'shared.card', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
