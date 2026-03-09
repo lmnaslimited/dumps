@@ -78,7 +78,7 @@
     },
     "testimonials": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.card",
       "pluginOptions": {
         "i18n": {
