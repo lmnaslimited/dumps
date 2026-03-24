@@ -1732,10 +1732,13 @@ export interface ApiSubtitleSubtitle extends Struct.CollectionTypeSchema {
       'api::subtitle.subtitle'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    sourceId: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
-    subtitle: Schema.Attribute.Component<'core.subtitle', true>;
+    sourceId: Schema.Attribute.String & Schema.Attribute.Required;
+    subtitle: Schema.Attribute.Component<'core.subtitle', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

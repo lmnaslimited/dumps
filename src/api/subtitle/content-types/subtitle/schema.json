@@ -18,13 +18,18 @@
   "attributes": {
     "sourceId": {
       "type": "string",
-      "unique": true,
+      "unique": false,
       "required": true
     },
     "subtitle": {
       "type": "component",
       "repeatable": true,
-      "component": "core.subtitle"
+      "component": "core.subtitle",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
