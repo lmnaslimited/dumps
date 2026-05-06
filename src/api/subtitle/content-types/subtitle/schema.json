@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subtitles",
+  "info": {
+    "singularName": "subtitle",
+    "pluralName": "subtitles",
+    "displayName": "Subtitle",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "sourceId": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "subtitle": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.subtitle",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

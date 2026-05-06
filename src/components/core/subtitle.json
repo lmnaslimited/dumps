@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_core_subtitles",
+  "info": {
+    "displayName": "Subtitle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "startTime": {
+      "type": "string"
+    },
+    "endTime": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}
