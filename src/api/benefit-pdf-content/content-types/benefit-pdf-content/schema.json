@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benefit_pdf_contents",
+  "info": {
+    "singularName": "benefit-pdf-content",
+    "pluralName": "benefit-pdf-contents",
+    "displayName": "Benefit PDF Content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "performanceAndUserAnswer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "analysis": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "scoreOverview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ctaSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "nextSteps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "benefit_type": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "recommendations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.range"
+    }
+  }
+}

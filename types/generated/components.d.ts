@@ -191,6 +191,18 @@ export interface CoreQuestion extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreRange extends Struct.ComponentSchema {
+  collectionName: 'components_core_ranges';
+  info: {
+    displayName: 'range';
+  };
+  attributes: {
+    max: Schema.Attribute.Decimal;
+    message: Schema.Attribute.Text;
+    min: Schema.Attribute.Decimal;
+  };
+}
+
 export interface CoreSeoIcons extends Struct.ComponentSchema {
   collectionName: 'components_core_seo_icons';
   info: {
@@ -415,6 +427,7 @@ declare module '@strapi/strapi' {
       'core.options': CoreOptions;
       'core.plan': CorePlan;
       'core.question': CoreQuestion;
+      'core.range': CoreRange;
       'core.seo-icons': CoreSeoIcons;
       'core.subtitle': CoreSubtitle;
       'core.testimonial': CoreTestimonial;

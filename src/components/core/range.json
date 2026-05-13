@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_core_ranges",
+  "info": {
+    "displayName": "range"
+  },
+  "options": {},
+  "attributes": {
+    "min": {
+      "type": "decimal"
+    },
+    "max": {
+      "type": "decimal"
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}
