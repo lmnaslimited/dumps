@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "benefit_questions",
+  "info": {
+    "singularName": "benefit-question",
+    "pluralName": "benefit-questions",
+    "displayName": "Benefit Question",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "benefitType": {
+      "type": "enumeration",
+      "enum": [
+        "roi_calculator",
+        "pipeline_audit",
+        "cpq_maturity_scan",
+        "sales_cycle_analyzer",
+        "tender_complexity_score"
+      ]
+    },
+    "questions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.question"
+    }
+  }
+}

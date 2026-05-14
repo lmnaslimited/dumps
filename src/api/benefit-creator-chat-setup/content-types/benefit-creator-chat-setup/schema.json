@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "footers",
+  "collectionName": "benefit_creator_chat_setups",
   "info": {
-    "singularName": "footer",
-    "pluralName": "footers",
-    "displayName": "Footer",
+    "singularName": "benefit-creator-chat-setup",
+    "pluralName": "benefit-creator-chat-setups",
+    "displayName": "Benefit Creator Chat Setup",
     "description": ""
   },
   "options": {
@@ -16,24 +16,71 @@
     }
   },
   "attributes": {
-    "companyName": {
+    "welcomeBackText": {
       "type": "string",
-      "default": "LMNAs",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "companyInfo": {
-      "type": "text",
+    "welcomeNewText": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "social": {
+    "aiThinking": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "working": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sendButton": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "followUpTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "recomdationTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "scroreText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "chatbuttons": {
       "type": "component",
       "repeatable": true,
       "component": "core.button",
@@ -43,60 +90,18 @@
         }
       }
     },
-    "product": {
-      "type": "component",
-      "repeatable": true,
-      "component": "core.button",
+    "startFlowText": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "more": {
-      "type": "component",
-      "repeatable": true,
-      "component": "core.button",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "contact": {
+    "streamFlow": {
       "type": "component",
       "repeatable": false,
-      "component": "core.contact",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "policies": {
-      "type": "component",
-      "repeatable": true,
-      "component": "core.button",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "menu": {
-      "type": "component",
-      "repeatable": true,
-      "component": "core.highlight",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "language": {
-      "type": "component",
-      "repeatable": true,
-      "component": "core.button",
+      "component": "core.options",
       "pluginOptions": {
         "i18n": {
           "localized": true

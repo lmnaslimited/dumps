@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_core_questions",
+  "info": {
+    "displayName": "Question",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "questionId": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.options"
+    },
+    "inputType": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "number",
+        "options"
+      ]
+    },
+    "key": {
+      "type": "string"
+    }
+  }
+}

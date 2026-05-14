@@ -7,6 +7,9 @@ export interface CoreButton extends Struct.ComponentSchema {
     displayName: 'Button';
   };
   attributes: {
+    benefitMode: Schema.Attribute.Enumeration<
+      ['roi_calculator', 'pipeline_audit', 'cpq_maturity']
+    >;
     description: Schema.Attribute.Text;
     formMode: Schema.Attribute.Enumeration<
       ['booking', 'contact', 'download', 'undefined']
@@ -170,6 +173,33 @@ export interface CorePlan extends Struct.ComponentSchema {
     support: Schema.Attribute.String;
     users: Schema.Attribute.String;
     warranty: Schema.Attribute.String;
+  };
+}
+
+export interface CoreQuestion extends Struct.ComponentSchema {
+  collectionName: 'components_core_questions';
+  info: {
+    description: '';
+    displayName: 'Question';
+  };
+  attributes: {
+    inputType: Schema.Attribute.Enumeration<['text', 'number', 'options']>;
+    key: Schema.Attribute.String;
+    options: Schema.Attribute.Component<'core.options', true>;
+    question: Schema.Attribute.String;
+    questionId: Schema.Attribute.String;
+  };
+}
+
+export interface CoreRange extends Struct.ComponentSchema {
+  collectionName: 'components_core_ranges';
+  info: {
+    displayName: 'range';
+  };
+  attributes: {
+    max: Schema.Attribute.Decimal;
+    message: Schema.Attribute.Text;
+    min: Schema.Attribute.Decimal;
   };
 }
 
@@ -396,6 +426,8 @@ declare module '@strapi/strapi' {
       'core.image': CoreImage;
       'core.options': CoreOptions;
       'core.plan': CorePlan;
+      'core.question': CoreQuestion;
+      'core.range': CoreRange;
       'core.seo-icons': CoreSeoIcons;
       'core.subtitle': CoreSubtitle;
       'core.testimonial': CoreTestimonial;

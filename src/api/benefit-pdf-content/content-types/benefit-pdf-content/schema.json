@@ -1,10 +1,10 @@
 {
-  "kind": "singleType",
-  "collectionName": "footers",
+  "kind": "collectionType",
+  "collectionName": "benefit_pdf_contents",
   "info": {
-    "singularName": "footer",
-    "pluralName": "footers",
-    "displayName": "Footer",
+    "singularName": "benefit-pdf-content",
+    "pluralName": "benefit-pdf-contents",
+    "displayName": "Benefit PDF Content",
     "description": ""
   },
   "options": {
@@ -16,92 +16,95 @@
     }
   },
   "attributes": {
-    "companyName": {
-      "type": "string",
-      "default": "LMNAs",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "companyInfo": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "social": {
-      "type": "component",
-      "repeatable": true,
-      "component": "core.button",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "product": {
-      "type": "component",
-      "repeatable": true,
-      "component": "core.button",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "more": {
-      "type": "component",
-      "repeatable": true,
-      "component": "core.button",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "contact": {
+    "header": {
       "type": "component",
       "repeatable": false,
-      "component": "core.contact",
+      "component": "core.header",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "policies": {
+    "sections": {
       "type": "component",
       "repeatable": true,
-      "component": "core.button",
+      "component": "shared.callout",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "menu": {
+    "performanceAndUserAnswer": {
       "type": "component",
-      "repeatable": true,
-      "component": "core.highlight",
+      "repeatable": false,
+      "component": "shared.callout",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "language": {
+    "analysis": {
       "type": "component",
-      "repeatable": true,
-      "component": "core.button",
+      "repeatable": false,
+      "component": "shared.callout",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "scoreOverview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ctaSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "nextSteps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "benefit_type": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "recommendations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.range"
     }
   }
 }

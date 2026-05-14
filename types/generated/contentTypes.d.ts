@@ -464,6 +464,236 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiBenefitCreatorChatSetupBenefitCreatorChatSetup
+  extends Struct.SingleTypeSchema {
+  collectionName: 'benefit_creator_chat_setups';
+  info: {
+    description: '';
+    displayName: 'Benefit Creator Chat Setup';
+    pluralName: 'benefit-creator-chat-setups';
+    singularName: 'benefit-creator-chat-setup';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    aiThinking: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    chatbuttons: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    followUpTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::benefit-creator-chat-setup.benefit-creator-chat-setup'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    recomdationTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    scroreText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    sendButton: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    startFlowText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    streamFlow: Schema.Attribute.Component<'core.options', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    welcomeBackText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    welcomeNewText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    working: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+  };
+}
+
+export interface ApiBenefitPdfContentBenefitPdfContent
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'benefit_pdf_contents';
+  info: {
+    description: '';
+    displayName: 'Benefit PDF Content';
+    pluralName: 'benefit-pdf-contents';
+    singularName: 'benefit-pdf-content';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    analysis: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    benefit_type: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    ctaSection: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    footer: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    header: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::benefit-pdf-content.benefit-pdf-content'
+    >;
+    nextSteps: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    performanceAndUserAnswer: Schema.Attribute.Component<
+      'shared.callout',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    recommendations: Schema.Attribute.Component<'core.range', true>;
+    scoreOverview: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    sections: Schema.Attribute.Component<'shared.callout', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBenefitQuestionBenefitQuestion
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'benefit_questions';
+  info: {
+    description: '';
+    displayName: 'Benefit Question';
+    pluralName: 'benefit-questions';
+    singularName: 'benefit-question';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    benefitType: Schema.Attribute.Enumeration<
+      [
+        'roi_calculator',
+        'pipeline_audit',
+        'cpq_maturity_scan',
+        'sales_cycle_analyzer',
+        'tender_complexity_score',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::benefit-question.benefit-question'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    questions: Schema.Attribute.Component<'core.question', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCareerCareer extends Struct.SingleTypeSchema {
   collectionName: 'careers';
   info: {
@@ -790,6 +1020,12 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    language: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::footer.footer'>;
     menu: Schema.Attribute.Component<'core.highlight', true> &
@@ -2390,6 +2626,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::benefit-creator-chat-setup.benefit-creator-chat-setup': ApiBenefitCreatorChatSetupBenefitCreatorChatSetup;
+      'api::benefit-pdf-content.benefit-pdf-content': ApiBenefitPdfContentBenefitPdfContent;
+      'api::benefit-question.benefit-question': ApiBenefitQuestionBenefitQuestion;
       'api::career.career': ApiCareerCareer;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::contact.contact': ApiContactContact;
