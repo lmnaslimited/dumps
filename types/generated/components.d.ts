@@ -215,6 +215,26 @@ export interface CoreTestimonial extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBlogHeader extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_headers';
+  info: {
+    displayName: 'Blog Header';
+  };
+  attributes: {
+    author: Schema.Attribute.String;
+    blogExert: Schema.Attribute.Text;
+    blogTitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    category: Schema.Attribute.Enumeration<
+      ['Product', 'Newsletter', 'Cloud', 'AI']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Newsletter'>;
+    image: Schema.Attribute.Text;
+    publishingDate: Schema.Attribute.Date;
+    slug: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCallout extends Struct.ComponentSchema {
   collectionName: 'components_shared_callouts';
   info: {
@@ -399,6 +419,7 @@ declare module '@strapi/strapi' {
       'core.seo-icons': CoreSeoIcons;
       'core.subtitle': CoreSubtitle;
       'core.testimonial': CoreTestimonial;
+      'shared.blog-header': SharedBlogHeader;
       'shared.callout': SharedCallout;
       'shared.card': SharedCard;
       'shared.feature': SharedFeature;
