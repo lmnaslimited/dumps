@@ -525,6 +525,38 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiAuthorDetailAuthorDetail
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'author_details';
+  info: {
+    displayName: 'Author Detail';
+    pluralName: 'author-details';
+    singularName: 'author-detail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    authorName: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    imgUrl: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::author-detail.author-detail'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBlogHomeBlogHome extends Struct.SingleTypeSchema {
   collectionName: 'blog_homes';
   info: {
@@ -550,7 +582,7 @@ export interface ApiBlogHomeBlogHome extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    ctaSection: Schema.Attribute.Component<'shared.callout', true> &
+    ctaSection: Schema.Attribute.Component<'shared.callout', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -561,7 +593,7 @@ export interface ApiBlogHomeBlogHome extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::blog-home.blog-home'
     >;
-    metaData: Schema.Attribute.Component<'shared.page-metadata', true> &
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -617,6 +649,13 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    featuredBlog: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
     metaData: Schema.Attribute.Component<'shared.page-metadata', false> &
@@ -626,6 +665,13 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2560,6 +2606,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::author-detail.author-detail': ApiAuthorDetailAuthorDetail;
       'api::blog-home.blog-home': ApiBlogHomeBlogHome;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;

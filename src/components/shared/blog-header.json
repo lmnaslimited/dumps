@@ -5,9 +5,6 @@
   },
   "options": {},
   "attributes": {
-    "slug": {
-      "type": "string"
-    },
     "blogTitle": {
       "type": "text",
       "required": true
@@ -34,6 +31,9 @@
     },
     "image": {
       "type": "text"
+    },
+    "slug": {
+      "type": "string"
     }
   },
   "config": {}

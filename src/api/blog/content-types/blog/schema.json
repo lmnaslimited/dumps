@@ -15,6 +15,15 @@
     }
   },
   "attributes": {
+    "slug": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "unique": true
+    },
     "blogHeader": {
       "type": "component",
       "pluginOptions": {
@@ -62,6 +71,15 @@
       },
       "component": "shared.page-metadata",
       "repeatable": false
+    },
+    "featuredBlog": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": false
     }
   }
 }

@@ -33,7 +33,7 @@
         }
       },
       "component": "shared.callout",
-      "repeatable": true
+      "repeatable": false
     },
     "metaData": {
       "type": "component",
@@ -43,7 +43,7 @@
         }
       },
       "component": "shared.page-metadata",
-      "repeatable": true
+      "repeatable": false
     }
   }
 }
