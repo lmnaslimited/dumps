@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "author_details",
+  "info": {
+    "singularName": "author-detail",
+    "pluralName": "author-details",
+    "displayName": "Author Detail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "authorName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "imgUrl": {
+      "type": "text"
+    }
+  }
+}

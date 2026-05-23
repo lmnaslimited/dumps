@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_shared_blog_headers",
+  "info": {
+    "displayName": "Blog Header"
+  },
+  "options": {},
+  "attributes": {
+    "blogTitle": {
+      "type": "text",
+      "required": true
+    },
+    "blogExert": {
+      "type": "text"
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Newsletter",
+      "enum": [
+        "Product",
+        "Newsletter",
+        "Cloud",
+        "AI"
+      ]
+    },
+    "publishingDate": {
+      "type": "date"
+    },
+    "author": {
+      "type": "string"
+    },
+    "image": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

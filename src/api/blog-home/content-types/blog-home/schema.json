@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "blog_homes",
+  "info": {
+    "singularName": "blog-home",
+    "pluralName": "blog-homes",
+    "displayName": "Blog Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "blogHeader": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "core.header",
+      "repeatable": false
+    },
+    "ctaSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.callout",
+      "repeatable": false
+    },
+    "metaData": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.page-metadata",
+      "repeatable": false
+    }
+  }
+}
