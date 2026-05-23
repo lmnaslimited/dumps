@@ -19,7 +19,7 @@ jobs:
 
       - name: Set Docker tags
         run: |
-          if [ "${GITHUB_REF_NAME}" = "main" ]; then
+          if [ "${GITHUB_REF_NAME}" = "develop" ]; then
             echo "DOCKER_TAGS=${{ secrets.DOCKER_HUB_USERNAME }}/dumps:latest,${{ secrets.DOCKER_HUB_USERNAME }}/dumps:${VERSION}" >> $GITHUB_ENV
 
       - name: Login to Docker Hub
