@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_core_casestudy_tables",
+  "info": {
+    "displayName": "casestudy_table_and_charts",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "table",
+        "chart"
+      ],
+      "default": "table"
+    },
+    "content": {
+      "type": "json"
+    },
+    "UserGuide": {
+      "type": "richtext",
+      "default": "For Table use this structure  {   \"columns\": [ { \"key\": \"sales\", \"label\": \"Sales Team\" },  { \"key\": \"finance\", \"label\": \"Finance Team\" } ],   \"rows\": [ {  \"sales\": \"Uses CRM reports\",  \"finance\": \"Manual data consolidation\"  },     { \"sales\": \"Delayed reporting\",   \"finance\": \"Limited forecasting\"  }] },   For Charts use this Structure  {\"data\": [ { \"label\": \"Jan\", \"value\": 20 }, { \"label\": \"Feb\", \"value\": 50 },  { \"label\": \"Mar\", \"value\": 35 },  { \"label\": \"Apr\", \"value\": 80 } ]}",
+      "private": true
+    },
+    "sectionName": {
+      "type": "string"
+    }
+  }
+}

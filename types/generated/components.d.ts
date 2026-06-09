@@ -20,6 +20,36 @@ export interface CoreButton extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreCasestudyCta extends Struct.ComponentSchema {
+  collectionName: 'components_core_casestudy_ctas';
+  info: {
+    description: '';
+    displayName: 'casestudy_cta';
+  };
+  attributes: {
+    Button: Schema.Attribute.Component<'core.button', false>;
+    cta: Schema.Attribute.Enumeration<['cta']> &
+      Schema.Attribute.DefaultTo<'cta'>;
+  };
+}
+
+export interface CoreCasestudyTable extends Struct.ComponentSchema {
+  collectionName: 'components_core_casestudy_tables';
+  info: {
+    description: '';
+    displayName: 'casestudy_table_and_charts';
+  };
+  attributes: {
+    content: Schema.Attribute.JSON;
+    sectionName: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<['table', 'chart']> &
+      Schema.Attribute.DefaultTo<'table'>;
+    UserGuide: Schema.Attribute.RichText &
+      Schema.Attribute.Private &
+      Schema.Attribute.DefaultTo<'For Table use this structure  {   "columns": [ { "key": "sales", "label": "Sales Team" },  { "key": "finance", "label": "Finance Team" } ],   "rows": [ {  "sales": "Uses CRM reports",  "finance": "Manual data consolidation"  },     { "sales": "Delayed reporting",   "finance": "Limited forecasting"  }] },   For Charts use this Structure  {"data": [ { "label": "Jan", "value": 20 }, { "label": "Feb", "value": 50 },  { "label": "Mar", "value": 35 },  { "label": "Apr", "value": 80 } ]}'>;
+  };
+}
+
 export interface CoreContact extends Struct.ComponentSchema {
   collectionName: 'components_core_contacts';
   info: {
@@ -153,6 +183,18 @@ export interface CoreOptions extends Struct.ComponentSchema {
   attributes: {
     label: Schema.Attribute.String;
     value: Schema.Attribute.String;
+  };
+}
+
+export interface CorePdfCasestudy extends Struct.ComponentSchema {
+  collectionName: 'components_core_pdf_casestudies';
+  info: {
+    description: '';
+    displayName: 'casestudy_paragraph';
+  };
+  attributes: {
+    paragraph: Schema.Attribute.Blocks;
+    sectionName: Schema.Attribute.String;
   };
 }
 
@@ -409,12 +451,15 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'core.button': CoreButton;
+      'core.casestudy-cta': CoreCasestudyCta;
+      'core.casestudy-table': CoreCasestudyTable;
       'core.contact': CoreContact;
       'core.form-field': CoreFormField;
       'core.header': CoreHeader;
       'core.highlight': CoreHighlight;
       'core.image': CoreImage;
       'core.options': CoreOptions;
+      'core.pdf-casestudy': CorePdfCasestudy;
       'core.plan': CorePlan;
       'core.seo-icons': CoreSeoIcons;
       'core.subtitle': CoreSubtitle;
