@@ -75,6 +75,16 @@
           "localized": true
         }
       }
+    },
+    "accelerator": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.button",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
