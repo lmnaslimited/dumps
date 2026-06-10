@@ -46,7 +46,7 @@ export interface CoreCasestudyTable extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'table'>;
     UserGuide: Schema.Attribute.RichText &
       Schema.Attribute.Private &
-      Schema.Attribute.DefaultTo<'For Table use this structure  {   "columns": [ { "key": "sales", "label": "Sales Team" },  { "key": "finance", "label": "Finance Team" } ],   "rows": [ {  "sales": "Uses CRM reports",  "finance": "Manual data consolidation"  },     { "sales": "Delayed reporting",   "finance": "Limited forecasting"  }] },   For Charts use this Structure  {"data": [ { "label": "Jan", "value": 20 }, { "label": "Feb", "value": 50 },  { "label": "Mar", "value": 35 },  { "label": "Apr", "value": 80 } ]}'>;
+      Schema.Attribute.DefaultTo<'For Table use this structure  {   "columns": [ { "key": "sales", "label": "Sales Team" },  { "key": "finance", "label": "Finance Team" } ],   "rows": [ {  "sales": "Uses CRM reports",  "finance": "Manual data consolidation"  },     { "sales": "Delayed reporting",   "finance": "Limited forecasting"  }] },   For Charts use this Structure  {   "data": {"type": "pie" | "line" | "bar" | "donut" | "area" | "stacked-bar" | "stacked-area" | "radar","title":"Traffic Sources","categories": [ "Organic", "Paid", "Social", "Referral" ], "series": [{ "label": "Visitors", "values": [5200, 2100,  800, 1500 ]}] } }'>;
   };
 }
 
