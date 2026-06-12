@@ -193,6 +193,7 @@ export interface CorePdfCasestudy extends Struct.ComponentSchema {
     displayName: 'casestudy_paragraph';
   };
   attributes: {
+    image: Schema.Attribute.String;
     paragraph: Schema.Attribute.Blocks;
     sectionName: Schema.Attribute.String;
   };

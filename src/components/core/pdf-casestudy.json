@@ -11,6 +11,9 @@
     },
     "paragraph": {
       "type": "blocks"
+    },
+    "image": {
+      "type": "string"
     }
   }
 }
