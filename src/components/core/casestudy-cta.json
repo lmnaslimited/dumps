@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_core_casestudy_ctas",
+  "info": {
+    "displayName": "casestudy_cta",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cta": {
+      "type": "enumeration",
+      "enum": [
+        "cta"
+      ],
+      "default": "cta"
+    },
+    "Button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.button"
+    }
+  }
+}

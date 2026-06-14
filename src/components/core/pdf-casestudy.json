@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_core_pdf_casestudies",
+  "info": {
+    "displayName": "casestudy_paragraph",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionName": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "blocks"
+    },
+    "image": {
+      "type": "string"
+    }
+  }
+}

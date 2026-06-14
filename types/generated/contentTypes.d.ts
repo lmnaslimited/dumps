@@ -751,6 +751,14 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    pdfDownloadContent: Schema.Attribute.DynamicZone<
+      ['core.pdf-casestudy', 'core.casestudy-cta', 'core.casestudy-table']
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     pdfName: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

@@ -115,6 +115,19 @@
           "localized": true
         }
       }
+    },
+    "pdfDownloadContent": {
+      "type": "dynamiczone",
+      "components": [
+        "core.pdf-casestudy",
+        "core.casestudy-cta",
+        "core.casestudy-table"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
