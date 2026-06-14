@@ -1338,6 +1338,12 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    accelerator: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
