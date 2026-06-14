@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_core_casestudy_tables",
+  "info": {
+    "displayName": "casestudy_table_and_charts",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "table",
+        "chart"
+      ],
+      "default": "table"
+    },
+    "content": {
+      "type": "json"
+    },
+    "UserGuide": {
+      "type": "richtext",
+      "default": "For Table use this structure  {   \"columns\": [ { \"key\": \"sales\", \"label\": \"Sales Team\" },  { \"key\": \"finance\", \"label\": \"Finance Team\" } ],   \"rows\": [ {  \"sales\": \"Uses CRM reports\",  \"finance\": \"Manual data consolidation\"  },     { \"sales\": \"Delayed reporting\",   \"finance\": \"Limited forecasting\"  }] },   For Charts use this Structure  {   \"data\": {\"type\": \"pie\" | \"line\" | \"bar\" | \"donut\" | \"area\" | \"stacked-bar\" | \"stacked-area\" | \"radar\",\"title\":\"Traffic Sources\",\"categories\": [ \"Organic\", \"Paid\", \"Social\", \"Referral\" ], \"series\": [{ \"label\": \"Visitors\", \"values\": [5200, 2100,  800, 1500 ]}] } }",
+      "private": true
+    },
+    "sectionName": {
+      "type": "string"
+    }
+  }
+}
