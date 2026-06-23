@@ -327,6 +327,19 @@ export interface SharedFeature extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFormNavigation extends Struct.ComponentSchema {
+  collectionName: 'components_shared_form_navigations';
+  info: {
+    description: '';
+    displayName: 'formNavigation';
+  };
+  attributes: {
+    navNext: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Next'>;
+    navPrevious: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Previous'>;
+  };
+}
+
 export interface SharedHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_heroes';
   info: {
@@ -469,6 +482,7 @@ declare module '@strapi/strapi' {
       'shared.callout': SharedCallout;
       'shared.card': SharedCard;
       'shared.feature': SharedFeature;
+      'shared.form-navigation': SharedFormNavigation;
       'shared.hero': SharedHero;
       'shared.location': SharedLocation;
       'shared.page-metadata': SharedPageMetadata;

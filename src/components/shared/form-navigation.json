@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_form_navigations",
+  "info": {
+    "displayName": "formNavigation",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "navPrevious": {
+      "type": "string",
+      "required": false,
+      "default": "Previous"
+    },
+    "navNext": {
+      "type": "string",
+      "default": "Next"
+    }
+  }
+}
