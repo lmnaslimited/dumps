@@ -1275,6 +1275,7 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    faqSection: Schema.Attribute.Component<'shared.callout', false>;
     feature: Schema.Attribute.Component<'shared.feature', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1626,6 +1627,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    faqSection: Schema.Attribute.Component<'shared.callout', false>;
     guideFeature: Schema.Attribute.Component<'shared.hero', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

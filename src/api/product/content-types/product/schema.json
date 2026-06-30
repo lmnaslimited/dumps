@@ -172,6 +172,11 @@
           "localized": true
         }
       }
+    },
+    "faqSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
     }
   }
 }
