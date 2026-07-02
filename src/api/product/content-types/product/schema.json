@@ -176,7 +176,12 @@
     "faqSection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

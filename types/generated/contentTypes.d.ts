@@ -1275,7 +1275,12 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    faqSection: Schema.Attribute.Component<'shared.callout', false>;
+    faqSection: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     feature: Schema.Attribute.Component<'shared.feature', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1627,7 +1632,12 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    faqSection: Schema.Attribute.Component<'shared.callout', false>;
+    faqSection: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     guideFeature: Schema.Attribute.Component<'shared.hero', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
