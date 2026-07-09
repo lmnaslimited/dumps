@@ -496,6 +496,50 @@ export interface ApiAuthorDetailAuthorDetail
   };
 }
 
+export interface ApiBannerSettingBannerSetting extends Struct.SingleTypeSchema {
+  collectionName: 'banner_settings';
+  info: {
+    displayName: 'Banner Setting';
+    pluralName: 'banner-settings';
+    singularName: 'banner-setting';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    forAllPages: Schema.Attribute.Boolean;
+    gobalBannerContent: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::banner-setting.banner-setting'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    specificPageControl: Schema.Attribute.Component<'shared.callout', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBlogHomeBlogHome extends Struct.SingleTypeSchema {
   collectionName: 'blog_homes';
   info: {
@@ -2588,6 +2632,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::author-detail.author-detail': ApiAuthorDetailAuthorDetail;
+      'api::banner-setting.banner-setting': ApiBannerSettingBannerSetting;
       'api::blog-home.blog-home': ApiBlogHomeBlogHome;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;
