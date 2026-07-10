@@ -1528,6 +1528,12 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    json: Schema.Attribute.JSON &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
