@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "banner_settings",
+  "info": {
+    "singularName": "banner-setting",
+    "pluralName": "banner-settings",
+    "displayName": "Banner Setting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "forAllPages": {
+      "type": "boolean"
+    },
+    "gobalBannerContent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "specificPageControl": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
