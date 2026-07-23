@@ -1475,6 +1475,7 @@ export interface ApiLoginAndSignUpLoginAndSignUp
           localized: true;
         };
       }>;
+    OnlyInTestingPhase: Schema.Attribute.Boolean;
     passwordLabel: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1596,6 +1597,7 @@ export interface ApiLoginAndSignUpLoginAndSignUp
           localized: true;
         };
       }>;
+    TestUserAllowed: Schema.Attribute.Component<'core.options', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
