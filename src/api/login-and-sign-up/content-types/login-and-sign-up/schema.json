@@ -283,12 +283,22 @@
       }
     },
     "OnlyInTestingPhase": {
-      "type": "boolean"
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "TestUserAllowed": {
       "type": "component",
       "repeatable": true,
-      "component": "core.options"
+      "component": "core.options",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
