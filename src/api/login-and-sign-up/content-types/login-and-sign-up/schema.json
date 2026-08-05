@@ -299,6 +299,14 @@
           "localized": true
         }
       }
+    },
+    "accessVerifyContent": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
