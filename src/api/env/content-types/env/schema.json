@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "envs",
+  "info": {
+    "singularName": "env",
+    "pluralName": "envs",
+    "displayName": "Env",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    }
+  }
+}
