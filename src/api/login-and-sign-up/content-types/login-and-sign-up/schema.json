@@ -307,6 +307,14 @@
           "localized": true
         }
       }
+    },
+    "doctypeDetails": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
