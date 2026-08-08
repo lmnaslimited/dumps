@@ -16,6 +16,12 @@
     },
     "token": {
       "type": "string"
+    },
+    "platformUrl": {
+      "type": "string"
+    },
+    "platformToken": {
+      "type": "string"
     }
   }
 }

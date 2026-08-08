@@ -933,6 +933,8 @@ export interface ApiEnvEnv extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::env.env'> &
       Schema.Attribute.Private;
+    platformToken: Schema.Attribute.String;
+    platformUrl: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     token: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
