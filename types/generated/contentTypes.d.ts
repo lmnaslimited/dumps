@@ -401,6 +401,12 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    founderNote: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     heroSection: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

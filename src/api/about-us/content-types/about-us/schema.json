@@ -115,6 +115,16 @@
           "localized": true
         }
       }
+    },
+    "founderNote": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
