@@ -419,6 +419,21 @@ export interface SharedPlanFeature extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedProblemSolutionSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_problem_solution_sections';
+  info: {
+    displayName: 'problemSolutionSection';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'core.button', false>;
+    category: Schema.Attribute.String;
+    lable: Schema.Attribute.String;
+    problemTitle: Schema.Attribute.Text;
+    solutionDescription: Schema.Attribute.Text;
+    solutionImage: Schema.Attribute.Component<'core.image', false>;
+  };
+}
+
 export interface SharedSolution extends Struct.ComponentSchema {
   collectionName: 'components_shared_solutions';
   info: {
@@ -473,6 +488,7 @@ declare module '@strapi/strapi' {
       'shared.location': SharedLocation;
       'shared.page-metadata': SharedPageMetadata;
       'shared.plan-feature': SharedPlanFeature;
+      'shared.problem-solution-section': SharedProblemSolutionSection;
       'shared.solution': SharedSolution;
       'shared.teck-stack': SharedTeckStack;
     }
