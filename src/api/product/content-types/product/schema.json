@@ -182,6 +182,26 @@
           "localized": true
         }
       }
+    },
+    "youtubeVideoHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "youtubeVideoSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.image",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
