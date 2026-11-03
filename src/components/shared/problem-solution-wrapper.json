@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_problem_solution_wrappers",
+  "info": {
+    "displayName": "problemSolutionWrapper"
+  },
+  "options": {},
+  "attributes": {
+    "mainProblems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.problem-solution-section"
+    }
+  }
+}

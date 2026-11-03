@@ -1,31 +1,27 @@
 {
   "collectionName": "components_shared_problem_solution_sections",
   "info": {
-    "displayName": "problemSolutionSection"
+    "displayName": "mainProblems",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "lable": {
+    "title": {
       "type": "string"
     },
-    "category": {
+    "subtitle": {
+      "type": "text"
+    },
+    "highlight": {
       "type": "string"
     },
-    "problemTitle": {
-      "type": "text"
+    "badge": {
+      "type": "string"
     },
-    "solutionDescription": {
-      "type": "text"
-    },
-    "solutionImage": {
+    "subProblems": {
       "type": "component",
-      "repeatable": false,
-      "component": "core.image"
-    },
-    "button": {
-      "type": "component",
-      "repeatable": false,
-      "component": "core.button"
+      "repeatable": true,
+      "component": "shared.sub-problems"
     }
   }
 }

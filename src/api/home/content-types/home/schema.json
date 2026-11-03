@@ -108,8 +108,8 @@
     },
     "problemSolutionSection": {
       "type": "component",
-      "repeatable": true,
-      "component": "shared.problem-solution-section"
+      "repeatable": false,
+      "component": "shared.problem-solution-wrapper"
     }
   }
 }

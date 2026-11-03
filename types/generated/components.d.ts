@@ -422,15 +422,28 @@ export interface SharedPlanFeature extends Struct.ComponentSchema {
 export interface SharedProblemSolutionSection extends Struct.ComponentSchema {
   collectionName: 'components_shared_problem_solution_sections';
   info: {
-    displayName: 'problemSolutionSection';
+    description: '';
+    displayName: 'mainProblems';
   };
   attributes: {
-    button: Schema.Attribute.Component<'core.button', false>;
-    category: Schema.Attribute.String;
-    lable: Schema.Attribute.String;
-    problemTitle: Schema.Attribute.Text;
-    solutionDescription: Schema.Attribute.Text;
-    solutionImage: Schema.Attribute.Component<'core.image', false>;
+    badge: Schema.Attribute.String;
+    highlight: Schema.Attribute.String;
+    subProblems: Schema.Attribute.Component<'shared.sub-problems', true>;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedProblemSolutionWrapper extends Struct.ComponentSchema {
+  collectionName: 'components_shared_problem_solution_wrappers';
+  info: {
+    displayName: 'problemSolutionWrapper';
+  };
+  attributes: {
+    mainProblems: Schema.Attribute.Component<
+      'shared.problem-solution-section',
+      true
+    >;
   };
 }
 
@@ -447,6 +460,21 @@ export interface SharedSolution extends Struct.ComponentSchema {
     results: Schema.Attribute.Component<'core.header', true>;
     successCard: Schema.Attribute.Component<'shared.card', false>;
     testimonial: Schema.Attribute.Component<'core.testimonial', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedSubProblems extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sub_problems';
+  info: {
+    description: '';
+    displayName: 'subProblems';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'core.button', false>;
+    description: Schema.Attribute.Text;
+    solutionDescription: Schema.Attribute.Text;
+    solutionTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -489,7 +517,9 @@ declare module '@strapi/strapi' {
       'shared.page-metadata': SharedPageMetadata;
       'shared.plan-feature': SharedPlanFeature;
       'shared.problem-solution-section': SharedProblemSolutionSection;
+      'shared.problem-solution-wrapper': SharedProblemSolutionWrapper;
       'shared.solution': SharedSolution;
+      'shared.sub-problems': SharedSubProblems;
       'shared.teck-stack': SharedTeckStack;
     }
   }
