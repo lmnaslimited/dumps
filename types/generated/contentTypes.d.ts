@@ -1284,6 +1284,11 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       'shared.problem-solution-wrapper',
       false
     >;
+    productArchitectureHeader: Schema.Attribute.Component<'core.header', false>;
+    productArchitectureSection: Schema.Attribute.Component<
+      'shared.architecture',
+      true
+    >;
     publishedAt: Schema.Attribute.DateTime;
     socialSection: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{

@@ -110,6 +110,16 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.problem-solution-wrapper"
+    },
+    "productArchitectureHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "productArchitectureSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.architecture"
     }
   }
 }

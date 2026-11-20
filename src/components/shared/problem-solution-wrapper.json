@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_problem_solution_wrappers",
   "info": {
-    "displayName": "problemSolutionWrapper"
+    "displayName": "problem Solution Wrapper",
+    "description": ""
   },
   "options": {},
   "attributes": {
