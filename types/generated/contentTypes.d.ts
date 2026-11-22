@@ -1273,16 +1273,39 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'>;
     metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
-    problemSolutionHeader: Schema.Attribute.Component<'core.header', false>;
+    problemSolutionHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     problemSolutionSection: Schema.Attribute.Component<
       'shared.problem-solution-wrapper',
       false
-    >;
-    productArchitectureHeader: Schema.Attribute.Component<'core.header', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    productArchitectureHeader: Schema.Attribute.Component<
+      'core.header',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     productArchitectureSection: Schema.Attribute.Component<
       'shared.architecture',
       true
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     testimonials: Schema.Attribute.Component<'shared.card', true> &
       Schema.Attribute.SetPluginOptions<{

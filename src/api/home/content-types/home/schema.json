@@ -64,22 +64,42 @@
     "problemSolutionHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "core.header"
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "problemSolutionSection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.problem-solution-wrapper"
+      "component": "shared.problem-solution-wrapper",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "productArchitectureHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "core.header"
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "productArchitectureSection": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.architecture"
+      "component": "shared.architecture",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
