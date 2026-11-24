@@ -1273,6 +1273,12 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'>;
     metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
+    problemSection: Schema.Attribute.Component<'shared.hero', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     problemSolutionHeader: Schema.Attribute.Component<'core.header', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1307,7 +1313,25 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    socialSection: Schema.Attribute.Component<'shared.hero', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    successClients: Schema.Attribute.Component<'core.image', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     testimonials: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    trendingNowSection: Schema.Attribute.Component<'shared.callout', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
