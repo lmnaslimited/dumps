@@ -2039,6 +2039,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    Sector: Schema.Attribute.Enumeration<
+      ['generic', 'transformers', 'food-processing']
+    > &
+      Schema.Attribute.DefaultTo<'generic'>;
     slug: Schema.Attribute.UID<'name'>;
     solutionsCard: Schema.Attribute.Component<'shared.callout', true> &
       Schema.Attribute.SetPluginOptions<{

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_sector_options",
+  "info": {
+    "displayName": "sector-option"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}

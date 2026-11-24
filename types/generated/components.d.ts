@@ -339,6 +339,7 @@ export interface SharedHero extends Struct.ComponentSchema {
     heading: Schema.Attribute.Component<'core.header', false>;
     highlight: Schema.Attribute.Component<'core.highlight', true>;
     image: Schema.Attribute.Component<'core.image', false>;
+    sectorDropdown: Schema.Attribute.Component<'shared.sector-option', true>;
   };
 }
 
@@ -419,6 +420,17 @@ export interface SharedPlanFeature extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSectorOption extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sector_options';
+  info: {
+    displayName: 'sector-option';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSolution extends Struct.ComponentSchema {
   collectionName: 'components_shared_solutions';
   info: {
@@ -473,6 +485,7 @@ declare module '@strapi/strapi' {
       'shared.location': SharedLocation;
       'shared.page-metadata': SharedPageMetadata;
       'shared.plan-feature': SharedPlanFeature;
+      'shared.sector-option': SharedSectorOption;
       'shared.solution': SharedSolution;
       'shared.teck-stack': SharedTeckStack;
     }
