@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_sub_problems",
+  "info": {
+    "displayName": "subProblems",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "solutionTitle": {
+      "type": "string"
+    },
+    "solutionDescription": {
+      "type": "text"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.button"
+    }
+  }
+}

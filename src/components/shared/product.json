@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_products",
+  "info": {
+    "displayName": "Product"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.button"
+    }
+  }
+}

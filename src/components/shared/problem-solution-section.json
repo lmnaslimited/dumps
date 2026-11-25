@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_problem_solution_sections",
+  "info": {
+    "displayName": "mainProblems",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "subProblems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.sub-problems"
+    }
+  }
+}

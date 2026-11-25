@@ -27,15 +27,45 @@
       }
     },
     "problemSection": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.hero",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
+  "type": "component",
+  "repeatable": true,
+  "component": "shared.hero",
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  }
+},
+"socialSection": {
+  "type": "component",
+  "repeatable": false,
+  "component": "shared.hero",
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  }
+},
+"trendingNowSection": {
+  "type": "component",
+  "repeatable": false,
+  "component": "shared.callout",
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  }
+},
+"successClients": {
+  "type": "component",
+  "repeatable": true,
+  "component": "core.image",
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  }
+},
     "calloutSection": {
       "type": "component",
       "repeatable": true,
@@ -56,26 +86,6 @@
         }
       }
     },
-    "socialSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.hero",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "trendingNowSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.callout",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "testimonials": {
       "type": "component",
       "repeatable": true,
@@ -86,20 +96,50 @@
         }
       }
     },
-    "successClients": {
+    "metaData": {
       "type": "component",
-      "repeatable": true,
-      "component": "core.image",
+      "repeatable": false,
+      "component": "shared.page-metadata"
+    },
+    "problemSolutionHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "metaData": {
+    "problemSolutionSection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.page-metadata"
+      "component": "shared.problem-solution-wrapper",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "productArchitectureHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "productArchitectureSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.architecture",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
