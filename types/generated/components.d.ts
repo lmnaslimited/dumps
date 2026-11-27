@@ -258,6 +258,20 @@ export interface CoreTestimonial extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedArchitecture extends Struct.ComponentSchema {
+  collectionName: 'components_shared_architectures';
+  info: {
+    description: '';
+    displayName: 'Architecture';
+  };
+  attributes: {
+    category: Schema.Attribute.String;
+    products: Schema.Attribute.Component<'shared.product', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedBlogHeader extends Struct.ComponentSchema {
   collectionName: 'components_shared_blog_headers';
   info: {
@@ -422,6 +436,50 @@ export interface SharedPlanFeature extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedProblemSolutionSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_problem_solution_sections';
+  info: {
+    description: '';
+    displayName: 'mainProblems';
+  };
+  attributes: {
+    badge: Schema.Attribute.String;
+    highlight: Schema.Attribute.String;
+    subProblems: Schema.Attribute.Component<'shared.sub-problems', true>;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedProblemSolutionWrapper extends Struct.ComponentSchema {
+  collectionName: 'components_shared_problem_solution_wrappers';
+  info: {
+    description: '';
+    displayName: 'problem Solution Wrapper';
+  };
+  attributes: {
+    mainProblems: Schema.Attribute.Component<
+      'shared.problem-solution-section',
+      true
+    >;
+  };
+}
+
+export interface SharedProduct extends Struct.ComponentSchema {
+  collectionName: 'components_shared_products';
+  info: {
+    displayName: 'Product';
+  };
+  attributes: {
+    badge: Schema.Attribute.String;
+    buttons: Schema.Attribute.Component<'core.button', true>;
+    highlight: Schema.Attribute.String;
+    href: Schema.Attribute.String;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedSectorOption extends Struct.ComponentSchema {
   collectionName: 'components_shared_sector_options';
   info: {
@@ -450,6 +508,21 @@ export interface SharedSolution extends Struct.ComponentSchema {
     results: Schema.Attribute.Component<'core.header', true>;
     successCard: Schema.Attribute.Component<'shared.card', false>;
     testimonial: Schema.Attribute.Component<'core.testimonial', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedSubProblems extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sub_problems';
+  info: {
+    description: '';
+    displayName: 'subProblems';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'core.button', false>;
+    description: Schema.Attribute.Text;
+    solutionDescription: Schema.Attribute.Text;
+    solutionTitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -483,6 +556,7 @@ declare module '@strapi/strapi' {
       'core.seo-icons': CoreSeoIcons;
       'core.subtitle': CoreSubtitle;
       'core.testimonial': CoreTestimonial;
+      'shared.architecture': SharedArchitecture;
       'shared.blog-header': SharedBlogHeader;
       'shared.callout': SharedCallout;
       'shared.card': SharedCard;
@@ -491,8 +565,12 @@ declare module '@strapi/strapi' {
       'shared.location': SharedLocation;
       'shared.page-metadata': SharedPageMetadata;
       'shared.plan-feature': SharedPlanFeature;
+      'shared.problem-solution-section': SharedProblemSolutionSection;
+      'shared.problem-solution-wrapper': SharedProblemSolutionWrapper;
+      'shared.product': SharedProduct;
       'shared.sector-option': SharedSectorOption;
       'shared.solution': SharedSolution;
+      'shared.sub-problems': SharedSubProblems;
       'shared.teck-stack': SharedTeckStack;
     }
   }
