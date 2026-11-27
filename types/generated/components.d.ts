@@ -353,6 +353,9 @@ export interface SharedHero extends Struct.ComponentSchema {
     heading: Schema.Attribute.Component<'core.header', false>;
     highlight: Schema.Attribute.Component<'core.highlight', true>;
     image: Schema.Attribute.Component<'core.image', false>;
+    sectorDropdown: Schema.Attribute.Component<'shared.sector-option', true>;
+    sectorLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Choose Your Domain'>;
   };
 }
 
@@ -477,6 +480,21 @@ export interface SharedProduct extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSectorOption extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sector_options';
+  info: {
+    description: '';
+    displayName: 'sector-option';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    sector: Schema.Attribute.Enumeration<
+      ['generic', 'transformers', 'food-processing']
+    >;
+  };
+}
+
 export interface SharedSolution extends Struct.ComponentSchema {
   collectionName: 'components_shared_solutions';
   info: {
@@ -550,6 +568,7 @@ declare module '@strapi/strapi' {
       'shared.problem-solution-section': SharedProblemSolutionSection;
       'shared.problem-solution-wrapper': SharedProblemSolutionWrapper;
       'shared.product': SharedProduct;
+      'shared.sector-option': SharedSectorOption;
       'shared.solution': SharedSolution;
       'shared.sub-problems': SharedSubProblems;
       'shared.teck-stack': SharedTeckStack;

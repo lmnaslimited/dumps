@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_sector_options",
+  "info": {
+    "displayName": "sector-option",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "sector": {
+      "type": "enumeration",
+      "enum": [
+        "generic",
+        "transformers",
+        "food-processing"
+      ]
+    }
+  }
+}

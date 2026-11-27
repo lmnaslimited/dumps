@@ -28,6 +28,15 @@
       "type": "component",
       "repeatable": false,
       "component": "core.image"
+    },
+    "sectorDropdown": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.sector-option"
+    },
+    "sectorLabel": {
+      "type": "string",
+      "default": "Choose Your Domain"
     }
   }
 }
