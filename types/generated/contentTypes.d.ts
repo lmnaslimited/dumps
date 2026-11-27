@@ -2039,7 +2039,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    Sector: Schema.Attribute.Enumeration<
+    sector: Schema.Attribute.Enumeration<
       ['generic', 'transformers', 'food-processing']
     > &
       Schema.Attribute.DefaultTo<'generic'>;

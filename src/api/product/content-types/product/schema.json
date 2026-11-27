@@ -203,7 +203,7 @@
         }
       }
     },
-    "Sector": {
+    "sector": {
       "type": "enumeration",
       "enum": [
         "generic",

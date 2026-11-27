@@ -340,6 +340,8 @@ export interface SharedHero extends Struct.ComponentSchema {
     highlight: Schema.Attribute.Component<'core.highlight', true>;
     image: Schema.Attribute.Component<'core.image', false>;
     sectorDropdown: Schema.Attribute.Component<'shared.sector-option', true>;
+    sectorLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Choose Your Domain'>;
   };
 }
 
@@ -423,11 +425,15 @@ export interface SharedPlanFeature extends Struct.ComponentSchema {
 export interface SharedSectorOption extends Struct.ComponentSchema {
   collectionName: 'components_shared_sector_options';
   info: {
+    description: '';
     displayName: 'sector-option';
   };
   attributes: {
     href: Schema.Attribute.String;
     label: Schema.Attribute.String;
+    sector: Schema.Attribute.Enumeration<
+      ['generic', 'transformers', 'food-processing']
+    >;
   };
 }
 
